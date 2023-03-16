@@ -6,11 +6,12 @@ const pResult = document.querySelector('#result');
 const form = document.querySelector('#form')
 
 
- btn.addEventListener('click',btnOnClick);
+ form.addEventListener('submit',suma);
 
 
-function btnOnClick()
+function suma(event)
 {
+    event.preventDefault();
     const sumaInputs = parseInt(input1.value)+ parseInt(input2.value);
      pResult.innerText= sumaInputs;
 }
